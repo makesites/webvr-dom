@@ -1,0 +1,21 @@
+{
+	"name": "webvr-dom",
+	"version": "0.0.0",
+	"author": "makesites",
+	"description": "A shim to support DOM rendering for VR devices",
+	"keywords": ["vr", "hmd", "webvr", "3D", "webgl"],
+	"homepage": "https://github.com/makesites/webvr-dom",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/makesites/webvr-dom"
+	},
+	"bugs": {
+		"url": "https://github.com/makesites/webvr-dom/issues"
+	},
+	"license": "MIT",
+	"main": "build/webvr-dom.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {}
+}
