@@ -1,6 +1,6 @@
 {
 	"name": "webvr-dom",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"homepage": "http://makesites.org/",
 	"description": "A shim to support DOM rendering for VR devices",
 	"main": "build/webvr-dom.js",
@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"ignore": [
 		"**/.*",
-		"*.md"
+		"*.md",
 		"examples",
 		"lib"
 	]
