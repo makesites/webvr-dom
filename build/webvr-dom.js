@@ -1,0 +1,1 @@
+window.VRDOM = window.VRDOM || {};
