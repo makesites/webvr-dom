@@ -47,6 +47,9 @@ var src = [
 	'lib/vrdom.js'
 ];
 
+// - get shaders
+var shaders = shaderFiles();
+
 // - concatinate all files
 concat({
 	src: src,
@@ -80,6 +83,7 @@ function concat(opts) {
 	//reuse package.json data and add build date
 	var data = package;
 	data.lib = lib.join(EOL);
+	data.shaders = JSON.stringify( shaders );
 	data.build_date = (new Date()).toUTCString();
 
 	// Save uncompressed file
@@ -154,4 +158,26 @@ function libFiles(){
 		src.push( "lib/"+ file );
 	}
 	return src;
+}
+
+function shaderFiles(){
+	var shaders = {};
+	var files = fs.readdirSync( "shaders/" );
+	// folter only javascript files
+	for( var i in files ){
+		var file = files[i];
+		// exclude certain files and main.js
+		if( file.substr(0, 1) == "." ) continue;
+		shaders[file] = getShader( "shaders/"+ file );
+	}
+	return shaders;
+}
+
+function getShader( file ){
+	// synchronous fetch
+	var shader = fs.readFileSync(file, FILE_ENCODING);
+	// remove carriage returns
+	shader = shader.replace(/\n|\t|\r\n/g, " ");
+
+	return shader;
 }
