@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>WebVR DOM</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+		* { margin: 0; padding: 0; }
+		body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		body {
+			font-family: Monospace;
+			font-size: 2em;
+			background-color: #f0f0f0;
+			margin: 0px;
+			overflow: hidden;
+		}
+
+		.button {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			padding: 8px;
+			color: #FFF;
+			background-color: #555;
+		}
+
+		.button:hover {
+			cursor: pointer;
+			background-color: rgb(18, 36, 70);
+		}
+
+		.button.error {
+			pointer-events: none;
+			background-color: red;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<ul>
+				<li>Menu #1</li>
+				<li>Menu #2</li>
+				<li>Menu #3</li>
+				<li>Menu #4</li>
+				<li>Menu #5</li>
+			</ul>
+		</div>
+		<script src="../build/webvr-dom.js"></script>
+
+		<script type="text/javascript">
+		VRDOM();
+		</script>
+	</body>
+</html>
