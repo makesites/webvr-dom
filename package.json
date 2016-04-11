@@ -1,6 +1,6 @@
 {
 	"name": "webvr-dom",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"author": "makesites",
 	"description": "A shim to support DOM rendering for VR devices",
 	"keywords": ["vr", "hmd", "webvr", "3D", "webgl"],
